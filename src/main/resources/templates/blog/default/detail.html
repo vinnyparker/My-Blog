@@ -38,13 +38,13 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav nav-pills navbar-nav">
                         <li>
-                            <a th:href="@{/index}">主页</a>
+                            <a th:href="@{/index}">Home</a>
                         </li>
                         <li>
-                            <a th:href="@{/link}">友链</a>
+                            <a th:href="@{/link}">Amigos</a>
                         </li>
                         <li>
-                            <a th:href="@{/about}">关于</a>
+                            <a th:href="@{/about}">Sobre</a>
                         </li>
                         <li>
                             <a href="https://github.com/ZHENFENG13">GitHub</a>
@@ -78,7 +78,7 @@
                             <span class="separator">&#x2F;</span>
                             <i class="fa fa-comments"></i><span class="data"><a
                                 href="#comments"><th:block
-                                th:text="${blogDetailVO.commentCount}"></th:block>条评论</a></span>
+                                th:text="${blogDetailVO.commentCount}"></th:block>Comentários</a></span>
                             <span class="separator">&#x2F;</span>
                             <i class="fa fa-street-view"></i>
                             <th:block th:text="${blogDetailVO.blogViews}"></th:block>
@@ -97,7 +97,7 @@
                     </div>
                 </article>
                 <aside class="blog-rights clearfix">
-                    <p>本站文章除注明转载/出处外，皆为作者原创，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文链接，否则保留追究法律责任的权利。</p>
+                    <p>Os artigos neste site são todos originais do autor, exceto a reimpressão / fonte. Bem-vindo à reimpressão, mas esta declaração de parágrafo deve ser mantida sem o consentimento do autor, e o link do texto original é fornecido em uma posição óbvia na página do artigo; caso contrário, o direito de assumir a responsabilidade legal é reservado.</p>
                 </aside>
                 <aside class="comments" id="comments">
                     <th:block th:if="${null != commentPageResult}">
@@ -108,7 +108,7 @@
                                     <div class="meta">
                                         <h3 th:text="${comment.commentator}"></h3>
                                         <span class="date">
-                                       评论时间：<th:block
+                                       Hora do Comentário：<th:block
                                                 th:text="${#dates.format(comment.commentCreateTime, 'yyyy-MM-dd HH:mm:ss')}"></th:block>
                                     </span>
                                     </div>
@@ -125,7 +125,7 @@
                                         <div class="meta2">
                                             <h3 th:text="${configurations.get('yourName')}">十三</h3>
                                             <span class="date">
-                                        回复时间： <th:block
+                                        Tempo de Resposta： <th:block
                                                     th:text="${#dates.format(comment.replyCreateTime, 'yyyy-MM-dd HH:mm:ss')}"></th:block>
                                     </span>
 
